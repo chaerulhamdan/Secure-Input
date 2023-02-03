@@ -2,7 +2,7 @@
     function secureInput($input, $attack_mode, $should_strip, $validate_only){
         $sanitized = $input;
         //list char berbahaya untuk serangan sqli, xss, dan rce
-        $sqli_charlist = array("'", '"', ";", "-", '#');
+        $sqli_charlist = array("'", '"', ";", "-", '#', "\\", "/", "*");
         $xss_charlist = array("<",">", "(", ")", ":");
         $rce_charlist = array("`", "|", "&", "$", "@");
         //apabila jenis seranganya all maka semua  array tiap serangan di satukan
